@@ -1,0 +1,213 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Main IS Haifa</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="http://cdn.jsdelivr.net/css-toggle-switch/latest/toggle-switch.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        font-family: arial;
+        font-size: 1.5em;
+      }
+
+      .popup-content {
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px;
+        font-family: Calibari;
+      }
+
+      .close-btn {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      .discord-icon {
+        background-image: url('img/discord.png');
+        /* Replace 'img/discord.png' with the path to your Discord icon image */
+        background-size: 24px 24px;
+        /* Adjust the size of the icon as needed */
+        background-repeat: no-repeat;
+        width: 24px;
+        /* Set the width and height of the icon */
+        height: 24px;
+        top: 3px;
+      }
+    </style>
+   </head>
+  <body class="">
+      <div class="msg">
+        <marquee class="msg" behavior="scroll" scrollamount="10" direction="right"> עברנו לאחסון גיט!&emsp;&emsp;&emsp;&emsp;צוות האתר אינו אחראי על כל שימוש שנעשה באתר</marquee>
+      </div>
+    <!--text&emsp;&emsp;&emsp;&emsp;&excl;-->
+    <div id="loading"></div>
+    <div class="navigation-wrap bg-light start-header start-style">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-md navbar-light">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <h3 style="font-family: 'Montserrat', sans-serif; font-size: 18px; position: absolute">IS Haifa, 14867 Entries.</h3>
+                <ul class="navbar-nav ml-auto py-4 py-md-0">
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" href="About/">About</a>
+                  </li>
+                  <li id="lst" class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="http://www.youtube.com/playlist?list=PLUfHxBkkFMSd0LrsOhOmB7H9SUBlM_5wR">Job interviewes</a>
+                      <a class="dropdown-item" href="">Coming soon...</a>
+                    </div>
+                  </li>
+                  <div style="margin-left:20px" class="switch-toggle switch-3 switch-candy">
+                    <input id="on" name="state-d" type="radio" checked="">
+                    <label for="on" id="1" onclick="">ON</label>
+                    <input id="na" name="state-d" type="radio" disabled="" checked="checked">
+                    <label for="na" class="disabled" onclick="">&nbsp;</label>
+                    <input id="off" name="state-d" type="radio">
+                    <label for="off" id="0" onclick="">OFF</label>
+                    <a></a>
+                  </div>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- two in a col!! -->
+    <section id="services" class="container2">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-sm-6 caption flex">
+              <a target="_blank" href="https://ISPlus2.github.io/whatsapp/" title="קישורים לקבוצות">
+                <h4>קישורים לקבוצות</h4>
+              </a>
+              <br>
+              <a target="_blank" href="https://ISPlus2.github.io/whatsapp/" title="קישורים לקבוצות">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/640px-WhatsApp.svg.png" class="serv" alt="קישורים לקבוצות">
+              </a>
+              <p></p>
+            </div>
+            <div class="col-sm-6 caption flex">
+              <a target="_blank" href="https://ISPlus2.github.io/kdams/tree.php" title="עץ קדמים">
+                <h4>עץ קדמים</h4>
+              </a>
+              <br>
+              <a target="_blank" href="https://ISPlus2.github.io/kdams/tree.php" title="עץ קדמים">
+                <img src="https://ISPlus2.github.io/img/tree.png" class="serv" alt="עץ קדמים">
+              </a>
+              
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-sm-6 caption flex">
+              <a target="_blank" href="https://ISPlus2.github.io/grades" title="ציונים">
+                <h4>ציונים</h4>
+              </a>
+              <br>
+              <a target="_blank" href="https://ISPlus2.github.io/grades" title="ציונים">
+                <img src="https://ISPlus2.github.io/img/grade.png" class="serv" alt="ציונים">
+              </a>
+              <p></p>
+            </div>
+            <div class="col-sm-6 caption flex">
+              <a target="_blank" href="https://ISPlus2.github.io/site/is" title="חומרים">
+                <h4>חומרים</h4>
+              </a>
+              <br>
+              <a target="_blank" href="https://ISPlus2.github.io/site/is" title="חומרים">
+                <img src="https://ISPlus2.github.io/img/drive.png" class="serv" alt="חומרים">
+              </a>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-sm-6 caption flex">
+              <a target="_blank" href="https://ISPlus2.github.io/teachers/" title="מורים פרטיים בחוג">
+                <h4>מורים פרטיים בחוג</h4>
+              </a>
+              <br>
+              <a target="_blank" href="https://ISPlus2.github.io/teachers/" title="מורים פרטיים בחוג">
+                <img src="https://ISPlus2.github.io/img/tutor.png" class="serv" alt="מורים פרטיים בחוג">
+              </a>
+              <p></p>
+            </div>
+            <div class="col-sm-6 caption flex">
+              <a target="_blank" href="https://ISPlus2.github.io/write/" title="צרו קשר">
+                <h4>צרו קשר</h4>
+              </a>
+              <br>
+              <a target="_blank" href="https://ISPlus2.github.io/write/" title="צרו קשר">
+                <img src="https://ISPlus2.github.io/img/complain.png" class="serv" alt="צרו קשר">
+              </a>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-sm-6 caption flex">
+              <a target="_blank" href="https://ISPlus2.github.io/grades/uploads" title="העלאת ציונים">
+                <h4>העלאת ציונים</h4>
+              </a>
+              <br>
+              <a target="_blank" href="https://ISPlus2.github.io/grades/uploads" title="העלאת ציונים">
+                <img src="https://ISPlus2.github.io/img/grade.png" class="serv" alt="העלאת ציונים">
+              </a>
+              <p></p>
+            </div>
+            <div class="col-sm-6 caption flex">
+              <a target="_blank" href="https://ISPlus2.github.io/site/uploads" title="העלאת חומרים">
+                <h4>העלאת חומרים</h4>
+              </a>
+              <br>
+              <a target="_blank" href="https://ISPlus2.github.io/site/uploads" title="העלאת חומרים">
+                <img src="https://ISPlus2.github.io/img/upload.png" class="serv" alt="העלאת חומרים">
+              </a>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      function show_lecs() {
+        $("li#lst").addClass('show');
+        $("div.dropdown-menu").focus();
+      }
+    </script>
+</html>
