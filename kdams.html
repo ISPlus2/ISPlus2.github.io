@@ -1,0 +1,260 @@
+<html><head>
+        <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <style>
+            span.course{
+                border-width:2px;
+                border-style:dashed;
+                border-color:inherit;
+                padding: 0.5em;
+                font-size: 14px;
+                margin: 16px;
+                margin-bottom: 20px;
+                display: inline-block;
+            }
+            div{
+                padding-bottom: 1em;
+            }
+            div.layer0{
+                border-color: #FFA500;
+            }
+            div.layer1{
+                border-color: #FF0000;
+            }
+            div.layer2{
+                border-color: #007700;
+            }
+            div.layer3{
+                border-color: #0000FF;
+            }
+            div.layer4{
+                border-color: #FF69B4;
+            }
+            div.layer5{
+                border-color: #0000c6;
+            }
+            .arrow{
+              
+              stroke-width:1; 
+              marker-end:url(#markerArrow)
+            }
+            svg{
+                top: 0px;
+                position: absolute;
+                left: 0px;
+                width: 100%;
+                height: 200%;
+                z-index: -1;
+            }
+            label.switch {
+              position: absolute;
+              display: inline-block;
+              width: 60px;
+              height: 34px;
+              left: 10%;
+              top: 13px;
+            }
+            
+            label.switch2 {
+              top: 55px;
+            }
+            
+            label.switch input { 
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+            .slider {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #ccc;
+              -webkit-transition: .4s;
+              transition: .4s;
+            }
+            
+            .slider:before {
+              position: absolute;
+              content: "";
+              height: 26px;
+              width: 26px;
+              left: 4px;
+              bottom: 4px;
+              background-color: white;
+              -webkit-transition: .4s;
+              transition: .4s;
+            }
+            
+            input:checked + .slider {
+              background-color: #2196F3;
+            }
+            
+            input:focus + .slider {
+              box-shadow: 0 0 1px #2196F3;
+            }
+            
+            input:checked + .slider:before {
+              -webkit-transform: translateX(26px);
+              -ms-transform: translateX(26px);
+              transform: translateX(26px);
+            }
+            
+            /* Rounded sliders */
+            .slider.round {
+              border-radius: 34px;
+            }
+            
+            .slider.round:before {
+              border-radius: 50%;
+            }
+            span.switch{
+                display: flex;
+                top: 20px;
+                position: absolute;
+            }
+            span.switch2{
+                top: 62px;
+            }
+            body.dark{
+                color: white;
+                background-color: black;
+            }
+            path{
+                fill: #000000;
+            }
+            body.dark path{
+                fill: #ffffff;
+            }
+            h4{
+                direction: rtl;
+            }
+        </style>
+        <!--stroke:rgb(0,0,0);-->
+    </head>
+    <body>
+        <center>
+            <span class="switch switch2">dark mode:</span><label class="switch switch2"><input onchange="switchMode()" id="slide" type="checkbox"><span class="slider round"></span></label>
+            <span class="switch">full kdams:</span><label class="switch"><input id="slide" type="checkbox"><span class="slider round"></span></label>
+            <h1>עץ קדמים</h1>
+            <h4>חג חוגי כללי: 87 נז קורסי חובה, סמינר 4 נז, פרוייקט 8 נז</h4>
+            <h4>29 נקודות קורסי בחירה, 4 נז דרך הרוח / יזמות</h4>
+            <h4>חלוקת הניקוד עשויה להשתנות בין התמחויות שונות</h4>
+            <div class="layer0"><span title="null" onmouseover="showArrows(this,true)" id="s2141500" class="course">אלגברה לינארית</span><span title="null" onmouseover="showArrows(this,true)" id="s2144001" class="course">גישה מחקרית במערכות מידע - סמינר</span><span title="null" onmouseover="showArrows(this,true)" id="s2141650" class="course">היבטים כלכליים בקבלת החלטות</span><span title="null" onmouseover="showArrows(this,true)" id="s2141300" class="course">הסתברות למערכות מידע</span><span title="null" onmouseover="showArrows(this,true)" id="s2141810" class="course">התנהגות ארגונית</span><span title="null" onmouseover="showArrows(this,true)" id="s2141100" class="course">חדוא א</span><span title="null" onmouseover="showArrows(this,true)" id="s2143790" class="course">יצירת תוכן בעזרת בינה מלאכותית</span><span title="null" onmouseover="showArrows(this,true)" id="s2144010" class="course">לוגיקה ומפרטים פורמליים</span><span title="null" onmouseover="showArrows(this,true)" id="s2141700" class="course">מבוא לטכנולוגיות מידע בארגון</span><span title="null" onmouseover="showArrows(this,true)" id="s2141750" class="course">מבוא למדעי הנתונים</span><span title="null" onmouseover="showArrows(this,true)" id="s2141900" class="course">מבוא למחשבים ותכנות</span><span title="null" onmouseover="showArrows(this,true)" id="s2143810" class="course">ממשקי אדם מחשב</span><span title="null" onmouseover="showArrows(this,true)" id="s2143860" class="course">ממשקים לא מילוליים - סמינר</span><span title="null" onmouseover="showArrows(this,true)" id="s2141505" class="course">מתמטיקה דיסקרטית ולוגיקה</span><span title="null" onmouseover="showArrows(this,true)" id="s2144400" class="course">שיטות סטטיסטיות</span></div>
+            <div class="layer1"><span title="חדוא א" onmouseover="showArrows(this,true)" id="s2141200" class="course">חדוא ב</span><span title="מתמטיקה דיסקרטית ולוגיקה,מבוא למחשבים ותכנות" onmouseover="showArrows(this,true)" id="s2142510" class="course">חומרה ומערכות הפעלה</span><span title="ממשקי אדם מחשב" onmouseover="showArrows(this,true)" id="s2144910" class="course">נושאים מתקדמים באינטראקציית אדם מחשב -סמ</span><span title="ממשקי אדם מחשב" onmouseover="showArrows(this,true)" id="s2144350" class="course">סדנה מתקדמת HCI</span><span title="הסתברות למערכות מידע" onmouseover="showArrows(this,true)" id="s2141400" class="course">סטטיסטיקה למערכות מידע</span><span title="גישה מחקרית במערכות מידע - סמינר,שיטות סטטיסטיות" onmouseover="showArrows(this,true)" id="s2144200" class="course">שיטות מחקר - סמינר</span><span title="מבוא למחשבים ותכנות" onmouseover="showArrows(this,true)" id="s2141960" class="course">תכנות מונחה עצמים</span></div>
+            <div class="layer2"><span title="חדוא ב,הסתברות למערכות מידע,מבוא למחשבים ותכנות" onmouseover="showArrows(this,true)" id="s2142400" class="course">אופטימיזציה במערכות תפעוליות</span><span title="תכנות מונחה עצמים" onmouseover="showArrows(this,true)" id="s2143650" class="course">ויזואליזציה של המידע</span><span title="הסתברות למערכות מידע,תכנות מונחה עצמים" onmouseover="showArrows(this,true)" id="s2143702" class="course">מבוא לבינה מלאכותית</span><span title="מתמטיקה דיסקרטית ולוגיקה,תכנות מונחה עצמים" onmouseover="showArrows(this,true)" id="s2142990" class="course">מבני נתונים ואלגוריתמים</span><span title="הסתברות למערכות מידע,סטטיסטיקה למערכות מידע" onmouseover="showArrows(this,true)" id="s2143150" class="course">מודלים סטטיסטיים למדעי הנתונים</span><span title="סטטיסטיקה למערכות מידע" onmouseover="showArrows(this,true)" id="s2143140" class="course">עיצוב חוויית שימוש לפרטיות ואבטחת מידע</span><span title="תכנות מונחה עצמים" onmouseover="showArrows(this,true)" id="s2142300" class="course">פיתוח מערכות מבוססות אינטרנט</span><span title="תכנות מונחה עצמים" onmouseover="showArrows(this,true)" id="s2142200" class="course">תכן ופיתוח של מערכות מידע</span><span title="הסתברות למערכות מידע,תכנות מונחה עצמים" onmouseover="showArrows(this,true)" id="s2142900" class="course">תקשורת נתונים</span></div>
+            <div class="layer3"><span title="הסתברות למערכות מידע,אלגברה לינארית,מבני נתונים ואלגוריתמים" onmouseover="showArrows(this,true)" id="s2143700" class="course">Information retrieval</span><span title="תכן ופיתוח של מערכות מידע" onmouseover="showArrows(this,true)" id="s2143200" class="course">אינטגרציה ויישום מע מידע ארגוניות (ERP)</span><span title="תקשורת נתונים,מבני נתונים ואלגוריתמים" onmouseover="showArrows(this,true)" id="s2143680" class="course">טכנולוגיית בלוקצאין במערכות סייבר-סמינר</span><span title="תכן ופיתוח של מערכות מידע" onmouseover="showArrows(this,true)" id="s2144060" class="course">טכנולוגיית המידע וקיימות- סמינר</span><span title="הסתברות למערכות מידע,תכנות מונחה עצמים,מבני נתונים ואלגוריתמים" onmouseover="showArrows(this,true)" id="s2142850" class="course">כריית טקסט בשפת פייתון</span><span title="מבני נתונים ואלגוריתמים" onmouseover="showArrows(this,true)" id="s2143112" class="course">למידת מכונה</span><span title="סטטיסטיקה למערכות מידע,אלגברה לינארית,מבני נתונים ואלגוריתמים" onmouseover="showArrows(this,true)" id="s2144710" class="course">מחשוב מקיף - סמינר</span><span title="תכן ופיתוח של מערכות מידע,מבני נתונים ואלגוריתמים" onmouseover="showArrows(this,true)" id="s2143895" class="course">מערכות המלצה מבוססות בינה מלאכותית</span><span title="מתמטיקה דיסקרטית ולוגיקה,תכנות מונחה עצמים,תכן ופיתוח של מערכות מידע" onmouseover="showArrows(this,true)" id="s2142800" class="course">מערכות מסדי נתונים</span><span title="תכן ופיתוח של מערכות מידע" onmouseover="showArrows(this,true)" id="s2142700" class="course">ניתוח מערכות מידע</span><span title="סטטיסטיקה למערכות מידע,מבני נתונים ואלגוריתמים" onmouseover="showArrows(this,true)" id="s2143550" class="course">ניתוח רשתות חברתיות</span></div>
+            <div class="layer4"><span title="ניתוח מערכות מידע" onmouseover="showArrows(this,true)" id="s2144600" class="course">אסטרטגית ניהול מערכות מידע</span><span title="מערכות מסדי נתונים" onmouseover="showArrows(this,true)" id="s2143113" class="course">בינה עסקית ומחסני נתונים</span><span title="תכן ופיתוח של מערכות מידע,ניתוח מערכות מידע,מבני נתונים ואלגוריתמים" onmouseover="showArrows(this,true)" id="s2143610" class="course">הנדסת תוכנה ואבטחת איכות</span><span title="תכן ופיתוח של מערכות מידע,ניתוח מערכות מידע" onmouseover="showArrows(this,true)" id="s2143801" class="course">יצירתיות וקוגניציה בהנדסת דרישות-סמינר</span><span title="ניתוח מערכות מידע" onmouseover="showArrows(this,true)" id="s2144603" class="course">כריית תהליכים עסקיים - סמינר</span><span title="למידת מכונה" onmouseover="showArrows(this,true)" id="s2143170" class="course">למידה עמוקה</span><span title="סטטיסטיקה למערכות מידע,מערכות מסדי נתונים,למידת מכונה" onmouseover="showArrows(this,true)" id="s2143030" class="course">מעבדה במדעי הנתונים</span><span title="תכנות מונחה עצמים,מערכות מסדי נתונים" onmouseover="showArrows(this,true)" id="s2143710" class="course">ניהול נתוני עתק - BIG DATA</span><span title="ניתוח מערכות מידע" onmouseover="showArrows(this,true)" id="s2143010" class="course">פרטיות ואתיקה של מידע</span><span title="תכנות מונחה עצמים,מערכות מסדי נתונים" onmouseover="showArrows(this,true)" id="s2143703" class="course">תכן ומימוש אפליקציות אנדרואיד</span></div>
+            <div class="layer5"><span title="למידת מכונה,למידה עמוקה" onmouseover="showArrows(this,true)" id="s2143960ש" class="course">בינה מלאכותית לניתוח רגשות והתנהגות-סמינר</span><span title="הנדסת תוכנה ואבטחת איכות" onmouseover="showArrows(this,true)" id="s2143500" class="course">נושאים מתקדמים בהנדסת תכנה - סמינר</span><span title="למידה עמוקה" onmouseover="showArrows(this,true)" id="s2144050" class="course">סמינר בלמידה עמוקה</span><span title="הסתברות למערכות מידע,מבוא לבינה מלאכותית,למידת מכונה,למידה עמוקה" onmouseover="showArrows(this,true)" id="s2144750" class="course">שיטות ויישומים מבוססי למידה עמוקה בעיבוד טקסט - סמינר</span><span title="הנדסת תוכנה ואבטחת איכות" onmouseover="showArrows(this,true)" id="s2144740" class="course">שקיפות אלגוריתמית</span></div>
+            <svg>
+            <defs>
+                <marker id="markerArrow" markerWidth="13" markerHeight="13" refX="2" refY="6" orient="auto">
+                    <path d="M2,2 L2,11 L10,6 L2,2"></path>
+                </marker>
+            </defs>
+          <line class="arrow layer1 s2141200" x1="987.4375" y1="208.234375" x2="104.421875" y2="434.234375" stroke="#00FFFF" style="display: none;"></line><line class="arrow layer1 s2142510" x1="854.21875" y1="278.234375" x2="225.984375" y2="434.234375" stroke="#2E8B57" style="display: none;"></line><line class="arrow layer1 s2142510" x1="587.796875" y1="348.234375" x2="225.984375" y2="434.234375" stroke="#BDB76B" style="display: none;"></line><line class="arrow layer1 s2144910" x1="1002.421875" y1="278.234375" x2="446.359375" y2="434.234375" stroke="#FF1493" style="display: none;"></line><line class="arrow layer1 s2144350" x1="1002.421875" y1="278.234375" x2="658.875" y2="434.234375" stroke="#FF7F50" style="display: none;"></line><line class="arrow layer1 s2141400" x1="732.40625" y1="208.234375" x2="818.96875" y2="434.234375" stroke="#BDB76B" style="display: none;"></line><line class="arrow layer1 s2144200" x1="332.71875" y1="208.234375" x2="982.40625" y2="434.234375" stroke="#00FFFF" style="display: none;"></line><line class="arrow layer1 s2144200" x1="746.84375" y1="348.234375" x2="982.40625" y2="434.234375" stroke="#BDB76B" style="display: none;"></line><line class="arrow layer1 s2141960" x1="854.21875" y1="278.234375" x2="560.046875" y2="504.234375" stroke="#FF7F50" style="display: none;"></line><line class="arrow layer2 s2142400" x1="732.40625" y1="208.234375" x2="215.8125" y2="590.234375" stroke="#40E0D0" style="display: none;"></line><line class="arrow layer2 s2142400" x1="854.21875" y1="278.234375" x2="215.8125" y2="590.234375" stroke="#00FFFF" style="display: none;"></line><line class="arrow layer2 s2142400" x1="104.421875" y1="434.234375" x2="215.8125" y2="590.234375" stroke="#40E0D0" style="display: none;"></line><line class="arrow layer2 s2143650" x1="560.046875" y1="504.234375" x2="393.96875" y2="590.234375" stroke="#2E8B57" style="display: none;"></line><line class="arrow layer2 s2143702" x1="732.40625" y1="208.234375" x2="548.25" y2="590.234375" stroke="#808000" style="display: none;"></line><line class="arrow layer2 s2143702" x1="560.046875" y1="504.234375" x2="548.25" y2="590.234375" stroke="#40E0D0" style="display: none;"></line><line class="arrow layer2 s2142990" x1="587.796875" y1="348.234375" x2="710.34375" y2="590.234375" stroke="#00FFFF" style="display: none;"></line><line class="arrow layer2 s2142990" x1="560.046875" y1="504.234375" x2="710.34375" y2="590.234375" stroke="#00FFFF" style="display: none;"></line><line class="arrow layer2 s2143150" x1="732.40625" y1="208.234375" x2="900" y2="590.234375" stroke="#FF7F50" style="display: none;"></line><line class="arrow layer2 s2143150" x1="818.96875" y1="434.234375" x2="900" y2="590.234375" stroke="#2E8B57" style="display: none;"></line><line class="arrow layer2 s2143140" x1="818.96875" y1="434.234375" x2="302.765625" y2="660.234375" stroke="#808000" style="display: none;"></line><line class="arrow layer2 s2142300" x1="560.046875" y1="504.234375" x2="532.703125" y2="660.234375" stroke="#2E8B57" style="display: none;"></line><line class="arrow layer2 s2142200" x1="560.046875" y1="504.234375" x2="728.015625" y2="660.234375" stroke="#2E8B57" style="display: none;"></line><line class="arrow layer2 s2142900" x1="732.40625" y1="208.234375" x2="882.8125" y2="660.234375" stroke="#FF1493" style="display: none;"></line><line class="arrow layer2 s2142900" x1="560.046875" y1="504.234375" x2="882.8125" y2="660.234375" stroke="#FF7F50" style="display: none;"></line><line class="arrow layer3 s2143700" x1="155.125" y1="208.234375" x2="112.296875" y2="746.234375" stroke="#FF7F50" style="display: none;"></line><line class="arrow layer3 s2143700" x1="732.40625" y1="208.234375" x2="112.296875" y2="746.234375" stroke="#808000" style="display: none;"></line><line class="arrow layer3 s2143700" x1="710.34375" y1="590.234375" x2="112.296875" y2="746.234375" stroke="#00FFFF" style="display: none;"></line><line class="arrow layer3 s2143200" x1="728.015625" y1="660.234375" x2="325.8125" y2="746.234375" stroke="#808000" style="display: none;"></line><line class="arrow layer3 s2143680" x1="710.34375" y1="590.234375" x2="583.875" y2="746.234375" stroke="#40E0D0" style="display: none;"></line><line class="arrow layer3 s2143680" x1="882.8125" y1="660.234375" x2="583.875" y2="746.234375" stroke="#2E8B57" style="display: none;"></line><line class="arrow layer3 s2144060" x1="728.015625" y1="660.234375" x2="816.34375" y2="746.234375" stroke="#FF1493" style="display: none;"></line><line class="arrow layer3 s2142850" x1="732.40625" y1="208.234375" x2="1006.0625" y2="746.234375" stroke="#808000" style="display: none;"></line><line class="arrow layer3 s2142850" x1="560.046875" y1="504.234375" x2="1006.0625" y2="746.234375" stroke="#FF1493" style="display: none;"></line><line class="arrow layer3 s2142850" x1="710.34375" y1="590.234375" x2="1006.0625" y2="746.234375" stroke="#40E0D0" style="display: none;"></line><line class="arrow layer3 s2143112" x1="710.34375" y1="590.234375" x2="141.46875" y2="816.234375" stroke="#00FA9A" style="display: none;"></line><line class="arrow layer3 s2144710" x1="155.125" y1="208.234375" x2="271.03125" y2="816.234375" stroke="#808000" style="display: none;"></line><line class="arrow layer3 s2144710" x1="818.96875" y1="434.234375" x2="271.03125" y2="816.234375" stroke="#2E8B57" style="display: none;"></line><line class="arrow layer3 s2144710" x1="710.34375" y1="590.234375" x2="271.03125" y2="816.234375" stroke="#00FFFF" style="display: none;"></line><line class="arrow layer3 s2143895" x1="710.34375" y1="590.234375" x2="467.015625" y2="816.234375" stroke="#BDB76B" style="display: none;"></line><line class="arrow layer3 s2143895" x1="728.015625" y1="660.234375" x2="467.015625" y2="816.234375" stroke="#00FFFF" style="display: none;"></line><line class="arrow layer3 s2142800" x1="587.796875" y1="348.234375" x2="661.6875" y2="816.234375" stroke="#2E8B57" style="display: none;"></line><line class="arrow layer3 s2142800" x1="560.046875" y1="504.234375" x2="661.6875" y2="816.234375" stroke="#808000" style="display: none;"></line><line class="arrow layer3 s2142800" x1="728.015625" y1="660.234375" x2="661.6875" y2="816.234375" stroke="#BDB76B" style="display: none;"></line><line class="arrow layer3 s2142700" x1="728.015625" y1="660.234375" x2="806.1875" y2="816.234375" stroke="#00FFFF" style="display: none;"></line><line class="arrow layer3 s2143550" x1="818.96875" y1="434.234375" x2="955.6875" y2="816.234375" stroke="#808000" style="display: none;"></line><line class="arrow layer3 s2143550" x1="710.34375" y1="590.234375" x2="955.6875" y2="816.234375" stroke="#808000" style="display: none;"></line><line class="arrow layer4 s2144600" x1="806.1875" y1="816.234375" x2="99.796875" y2="902.234375" stroke="#00FFFF" style="display: none;"></line><line class="arrow layer4 s2143113" x1="661.6875" y1="816.234375" x2="283.46875" y2="902.234375" stroke="#00FFFF" style="display: none;"></line><line class="arrow layer4 s2143610" x1="710.34375" y1="590.234375" x2="462.109375" y2="902.234375" stroke="#00FA9A" style="display: none;"></line><line class="arrow layer4 s2143610" x1="728.015625" y1="660.234375" x2="462.109375" y2="902.234375" stroke="#BDB76B" style="display: none;"></line><line class="arrow layer4 s2143610" x1="806.1875" y1="816.234375" x2="462.109375" y2="902.234375" stroke="#808000" style="display: none;"></line><line class="arrow layer4 s2143801" x1="728.015625" y1="660.234375" x2="680.09375" y2="902.234375" stroke="#00FA9A" style="display: none;"></line><line class="arrow layer4 s2143801" x1="806.1875" y1="816.234375" x2="680.09375" y2="902.234375" stroke="#00FA9A" style="display: none;"></line><line class="arrow layer4 s2144603" x1="806.1875" y1="816.234375" x2="904.625" y2="902.234375" stroke="#808000" style="display: none;"></line><line class="arrow layer4 s2143170" x1="141.46875" y1="816.234375" x2="1060.359375" y2="902.234375" stroke="#BDB76B" style="display: none;"></line><line class="arrow layer4 s2143030" x1="818.96875" y1="434.234375" x2="274.109375" y2="972.234375" stroke="#2E8B57" style="display: none;"></line><line class="arrow layer4 s2143030" x1="141.46875" y1="816.234375" x2="274.109375" y2="972.234375" stroke="#2E8B57" style="display: none;"></line><line class="arrow layer4 s2143030" x1="661.6875" y1="816.234375" x2="274.109375" y2="972.234375" stroke="#FF1493" style="display: none;"></line><line class="arrow layer4 s2143710" x1="560.046875" y1="504.234375" x2="451.59375" y2="972.234375" stroke="#FF7F50" style="display: none;"></line><line class="arrow layer4 s2143710" x1="661.6875" y1="816.234375" x2="451.59375" y2="972.234375" stroke="#FF1493" style="display: none;"></line><line class="arrow layer4 s2143010" x1="806.1875" y1="816.234375" x2="634.78125" y2="972.234375" stroke="#FF7F50" style="display: none;"></line><line class="arrow layer4 s2143703" x1="560.046875" y1="504.234375" x2="820.75" y2="972.234375" stroke="#FF7F50" style="display: none;"></line><line class="arrow layer4 s2143703" x1="661.6875" y1="816.234375" x2="820.75" y2="972.234375" stroke="#40E0D0" style="display: none;"></line><line class="arrow layer5 s2143960ש" x1="141.46875" y1="816.234375" x2="197.71875" y2="1058.234375" stroke="#FF7F50" style="display: none;"></line><line class="arrow layer5 s2143960ש" x1="1060.359375" y1="902.234375" x2="197.71875" y2="1058.234375" stroke="#2E8B57" style="display: none;"></line><line class="arrow layer5 s2143500" x1="462.109375" y1="902.234375" x2="452.921875" y2="1058.234375" stroke="#2E8B57" style="display: none;"></line><line class="arrow layer5 s2144050" x1="1060.359375" y1="902.234375" x2="647.984375" y2="1058.234375" stroke="#BDB76B" style="display: none;"></line><line class="arrow layer5 s2144750" x1="732.40625" y1="208.234375" x2="890.6875" y2="1058.234375" stroke="#FF1493" style="display: none;"></line><line class="arrow layer5 s2144750" x1="548.25" y1="590.234375" x2="890.6875" y2="1058.234375" stroke="#2E8B57" style="display: none;"></line><line class="arrow layer5 s2144750" x1="141.46875" y1="816.234375" x2="890.6875" y2="1058.234375" stroke="#808000" style="display: none;"></line><line class="arrow layer5 s2144750" x1="1060.359375" y1="902.234375" x2="890.6875" y2="1058.234375" stroke="#40E0D0" style="display: none;"></line><line class="arrow layer5 s2144740" x1="462.109375" y1="902.234375" x2="560.15625" y2="1128.234375" stroke="#00FFFF" style="display: none;"></line></svg>
+          
+        </center>
+        <script>
+            
+            var data = jQuery.parseJSON('[{"3":{"code":"2141500","name":"\u05d0\u05dc\u05d2\u05d1\u05e8\u05d4 \u05dc\u05d9\u05e0\u05d0\u05e8\u05d9\u05ea","kdams":null},"7":{"code":"2144001","name":"\u05d2\u05d9\u05e9\u05d4 \u05de\u05d7\u05e7\u05e8\u05d9\u05ea \u05d1\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2 - \u05e1\u05de\u05d9\u05e0\u05e8","kdams":null},"8":{"code":"2141650","name":"\u05d4\u05d9\u05d1\u05d8\u05d9\u05dd \u05db\u05dc\u05db\u05dc\u05d9\u05d9\u05dd \u05d1\u05e7\u05d1\u05dc\u05ea \u05d4\u05d7\u05dc\u05d8\u05d5\u05ea","kdams":null},"10":{"code":"2141300","name":"\u05d4\u05e1\u05ea\u05d1\u05e8\u05d5\u05ea \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2","kdams":null},"11":{"code":"2141810","name":"\u05d4\u05ea\u05e0\u05d4\u05d2\u05d5\u05ea \u05d0\u05e8\u05d2\u05d5\u05e0\u05d9\u05ea","kdams":null},"13":{"code":"2141100","name":"\u05d7\u05d3\u05d5\u05d0 \u05d0","kdams":null},"18":{"code":"2143790","name":"\u05d9\u05e6\u05d9\u05e8\u05ea \u05ea\u05d5\u05db\u05df \u05d1\u05e2\u05d6\u05e8\u05ea \u05d1\u05d9\u05e0\u05d4 \u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9\u05ea","kdams":null},"22":{"code":"2144010","name":"\u05dc\u05d5\u05d2\u05d9\u05e7\u05d4 \u05d5\u05de\u05e4\u05e8\u05d8\u05d9\u05dd \u05e4\u05d5\u05e8\u05de\u05dc\u05d9\u05d9\u05dd","kdams":null},"26":{"code":"2141700","name":"\u05de\u05d1\u05d5\u05d0 \u05dc\u05d8\u05db\u05e0\u05d5\u05dc\u05d5\u05d2\u05d9\u05d5\u05ea \u05de\u05d9\u05d3\u05e2 \u05d1\u05d0\u05e8\u05d2\u05d5\u05df","kdams":null},"27":{"code":"2141750","name":"\u05de\u05d1\u05d5\u05d0 \u05dc\u05de\u05d3\u05e2\u05d9 \u05d4\u05e0\u05ea\u05d5\u05e0\u05d9\u05dd","kdams":null},"28":{"code":"2141900","name":"\u05de\u05d1\u05d5\u05d0 \u05dc\u05de\u05d7\u05e9\u05d1\u05d9\u05dd \u05d5\u05ea\u05db\u05e0\u05d5\u05ea","kdams":null},"32":{"code":"2143810","name":"\u05de\u05de\u05e9\u05e7\u05d9 \u05d0\u05d3\u05dd \u05de\u05d7\u05e9\u05d1","kdams":null},"33":{"code":"2143860","name":"\u05de\u05de\u05e9\u05e7\u05d9\u05dd \u05dc\u05d0 \u05de\u05d9\u05dc\u05d5\u05dc\u05d9\u05d9\u05dd - \u05e1\u05de\u05d9\u05e0\u05e8","kdams":null},"37":{"code":"2141505","name":"\u05de\u05ea\u05de\u05d8\u05d9\u05e7\u05d4 \u05d3\u05d9\u05e1\u05e7\u05e8\u05d8\u05d9\u05ea \u05d5\u05dc\u05d5\u05d2\u05d9\u05e7\u05d4","kdams":null},"51":{"code":"2144400","name":"\u05e9\u05d9\u05d8\u05d5\u05ea \u05e1\u05d8\u05d8\u05d9\u05e1\u05d8\u05d9\u05d5\u05ea","kdams":null}},{"8":{"code":"2141200","name":"\u05d7\u05d3\u05d5\u05d0 \u05d1","kdams":"\u05d7\u05d3\u05d5\u05d0 \u05d0"},"9":{"code":"2142510","name":"\u05d7\u05d5\u05de\u05e8\u05d4 \u05d5\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05d4\u05e4\u05e2\u05dc\u05d4","kdams":"\u05de\u05ea\u05de\u05d8\u05d9\u05e7\u05d4 \u05d3\u05d9\u05e1\u05e7\u05e8\u05d8\u05d9\u05ea \u05d5\u05dc\u05d5\u05d2\u05d9\u05e7\u05d4,\u05de\u05d1\u05d5\u05d0 \u05dc\u05de\u05d7\u05e9\u05d1\u05d9\u05dd \u05d5\u05ea\u05db\u05e0\u05d5\u05ea"},"24":{"code":"2144910","name":"\u05e0\u05d5\u05e9\u05d0\u05d9\u05dd \u05de\u05ea\u05e7\u05d3\u05de\u05d9\u05dd \u05d1\u05d0\u05d9\u05e0\u05d8\u05e8\u05d0\u05e7\u05e6\u05d9\u05d9\u05ea \u05d0\u05d3\u05dd \u05de\u05d7\u05e9\u05d1 -\u05e1\u05de","kdams":"\u05de\u05de\u05e9\u05e7\u05d9 \u05d0\u05d3\u05dd \u05de\u05d7\u05e9\u05d1"},"29":{"code":"2144350","name":"\u05e1\u05d3\u05e0\u05d4 \u05de\u05ea\u05e7\u05d3\u05de\u05ea HCI","kdams":"\u05de\u05de\u05e9\u05e7\u05d9 \u05d0\u05d3\u05dd \u05de\u05d7\u05e9\u05d1"},"30":{"code":"2141400","name":"\u05e1\u05d8\u05d8\u05d9\u05e1\u05d8\u05d9\u05e7\u05d4 \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2","kdams":"\u05d4\u05e1\u05ea\u05d1\u05e8\u05d5\u05ea \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2"},"36":{"code":"2144200","name":"\u05e9\u05d9\u05d8\u05d5\u05ea \u05de\u05d7\u05e7\u05e8 - \u05e1\u05de\u05d9\u05e0\u05e8","kdams":"\u05d2\u05d9\u05e9\u05d4 \u05de\u05d7\u05e7\u05e8\u05d9\u05ea \u05d1\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2 - \u05e1\u05de\u05d9\u05e0\u05e8,\u05e9\u05d9\u05d8\u05d5\u05ea \u05e1\u05d8\u05d8\u05d9\u05e1\u05d8\u05d9\u05d5\u05ea"},"40":{"code":"2141960","name":"\u05ea\u05db\u05e0\u05d5\u05ea \u05de\u05d5\u05e0\u05d7\u05d4 \u05e2\u05e6\u05de\u05d9\u05dd","kdams":"\u05de\u05d1\u05d5\u05d0 \u05dc\u05de\u05d7\u05e9\u05d1\u05d9\u05dd \u05d5\u05ea\u05db\u05e0\u05d5\u05ea"}},{"1":{"code":"2142400","name":"\u05d0\u05d5\u05e4\u05d8\u05d9\u05de\u05d9\u05d6\u05e6\u05d9\u05d4 \u05d1\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05ea\u05e4\u05e2\u05d5\u05dc\u05d9\u05d5\u05ea","kdams":"\u05d7\u05d3\u05d5\u05d0 \u05d1,\u05d4\u05e1\u05ea\u05d1\u05e8\u05d5\u05ea \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2,\u05de\u05d1\u05d5\u05d0 \u05dc\u05de\u05d7\u05e9\u05d1\u05d9\u05dd \u05d5\u05ea\u05db\u05e0\u05d5\u05ea"},"7":{"code":"2143650","name":"\u05d5\u05d9\u05d6\u05d5\u05d0\u05dc\u05d9\u05d6\u05e6\u05d9\u05d4 \u05e9\u05dc \u05d4\u05de\u05d9\u05d3\u05e2","kdams":"\u05ea\u05db\u05e0\u05d5\u05ea \u05de\u05d5\u05e0\u05d7\u05d4 \u05e2\u05e6\u05de\u05d9\u05dd"},"15":{"code":"2143702","name":"\u05de\u05d1\u05d5\u05d0 \u05dc\u05d1\u05d9\u05e0\u05d4 \u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9\u05ea","kdams":"\u05d4\u05e1\u05ea\u05d1\u05e8\u05d5\u05ea \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2,\u05ea\u05db\u05e0\u05d5\u05ea \u05de\u05d5\u05e0\u05d7\u05d4 \u05e2\u05e6\u05de\u05d9\u05dd"},"16":{"code":"2142990","name":"\u05de\u05d1\u05e0\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05d5\u05d0\u05dc\u05d2\u05d5\u05e8\u05d9\u05ea\u05de\u05d9\u05dd","kdams":"\u05de\u05ea\u05de\u05d8\u05d9\u05e7\u05d4 \u05d3\u05d9\u05e1\u05e7\u05e8\u05d8\u05d9\u05ea \u05d5\u05dc\u05d5\u05d2\u05d9\u05e7\u05d4,\u05ea\u05db\u05e0\u05d5\u05ea \u05de\u05d5\u05e0\u05d7\u05d4 \u05e2\u05e6\u05de\u05d9\u05dd"},"17":{"code":"2143150","name":"\u05de\u05d5\u05d3\u05dc\u05d9\u05dd \u05e1\u05d8\u05d8\u05d9\u05e1\u05d8\u05d9\u05d9\u05dd \u05dc\u05de\u05d3\u05e2\u05d9 \u05d4\u05e0\u05ea\u05d5\u05e0\u05d9\u05dd","kdams":"\u05d4\u05e1\u05ea\u05d1\u05e8\u05d5\u05ea \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2,\u05e1\u05d8\u05d8\u05d9\u05e1\u05d8\u05d9\u05e7\u05d4 \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2"},"27":{"code":"2143140","name":"\u05e2\u05d9\u05e6\u05d5\u05d1 \u05d7\u05d5\u05d5\u05d9\u05d9\u05ea \u05e9\u05d9\u05de\u05d5\u05e9 \u05dc\u05e4\u05e8\u05d8\u05d9\u05d5\u05ea \u05d5\u05d0\u05d1\u05d8\u05d7\u05ea \u05de\u05d9\u05d3\u05e2","kdams":"\u05e1\u05d8\u05d8\u05d9\u05e1\u05d8\u05d9\u05e7\u05d4 \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2"},"28":{"code":"2142300","name":"\u05e4\u05d9\u05ea\u05d5\u05d7 \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d1\u05d5\u05e1\u05e1\u05d5\u05ea \u05d0\u05d9\u05e0\u05d8\u05e8\u05e0\u05d8","kdams":"\u05ea\u05db\u05e0\u05d5\u05ea \u05de\u05d5\u05e0\u05d7\u05d4 \u05e2\u05e6\u05de\u05d9\u05dd"},"33":{"code":"2142200","name":"\u05ea\u05db\u05df \u05d5\u05e4\u05d9\u05ea\u05d5\u05d7 \u05e9\u05dc \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2","kdams":"\u05ea\u05db\u05e0\u05d5\u05ea \u05de\u05d5\u05e0\u05d7\u05d4 \u05e2\u05e6\u05de\u05d9\u05dd"},"34":{"code":"2142900","name":"\u05ea\u05e7\u05e9\u05d5\u05e8\u05ea \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd","kdams":"\u05d4\u05e1\u05ea\u05d1\u05e8\u05d5\u05ea \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2,\u05ea\u05db\u05e0\u05d5\u05ea \u05de\u05d5\u05e0\u05d7\u05d4 \u05e2\u05e6\u05de\u05d9\u05dd"}},{"0":{"code":"2143700","name":"Information retrieval","kdams":"\u05d4\u05e1\u05ea\u05d1\u05e8\u05d5\u05ea \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2,\u05d0\u05dc\u05d2\u05d1\u05e8\u05d4 \u05dc\u05d9\u05e0\u05d0\u05e8\u05d9\u05ea,\u05de\u05d1\u05e0\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05d5\u05d0\u05dc\u05d2\u05d5\u05e8\u05d9\u05ea\u05de\u05d9\u05dd"},"1":{"code":"2143200","name":"\u05d0\u05d9\u05e0\u05d8\u05d2\u05e8\u05e6\u05d9\u05d4 \u05d5\u05d9\u05d9\u05e9\u05d5\u05dd \u05de\u05e2 \u05de\u05d9\u05d3\u05e2 \u05d0\u05e8\u05d2\u05d5\u05e0\u05d9\u05d5\u05ea (ERP)","kdams":"\u05ea\u05db\u05df \u05d5\u05e4\u05d9\u05ea\u05d5\u05d7 \u05e9\u05dc \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2"},"6":{"code":"2143680","name":"\u05d8\u05db\u05e0\u05d5\u05dc\u05d5\u05d2\u05d9\u05d9\u05ea \u05d1\u05dc\u05d5\u05e7\u05e6\u05d0\u05d9\u05df \u05d1\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05e1\u05d9\u05d9\u05d1\u05e8-\u05e1\u05de\u05d9\u05e0\u05e8","kdams":"\u05ea\u05e7\u05e9\u05d5\u05e8\u05ea \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd,\u05de\u05d1\u05e0\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05d5\u05d0\u05dc\u05d2\u05d5\u05e8\u05d9\u05ea\u05de\u05d9\u05dd"},"7":{"code":"2144060","name":"\u05d8\u05db\u05e0\u05d5\u05dc\u05d5\u05d2\u05d9\u05d9\u05ea \u05d4\u05de\u05d9\u05d3\u05e2 \u05d5\u05e7\u05d9\u05d9\u05de\u05d5\u05ea- \u05e1\u05de\u05d9\u05e0\u05e8","kdams":"\u05ea\u05db\u05df \u05d5\u05e4\u05d9\u05ea\u05d5\u05d7 \u05e9\u05dc \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2"},"9":{"code":"2142850","name":"\u05db\u05e8\u05d9\u05d9\u05ea \u05d8\u05e7\u05e1\u05d8 \u05d1\u05e9\u05e4\u05ea \u05e4\u05d9\u05d9\u05ea\u05d5\u05df","kdams":"\u05d4\u05e1\u05ea\u05d1\u05e8\u05d5\u05ea \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2,\u05ea\u05db\u05e0\u05d5\u05ea \u05de\u05d5\u05e0\u05d7\u05d4 \u05e2\u05e6\u05de\u05d9\u05dd,\u05de\u05d1\u05e0\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05d5\u05d0\u05dc\u05d2\u05d5\u05e8\u05d9\u05ea\u05de\u05d9\u05dd"},"12":{"code":"2143112","name":"\u05dc\u05de\u05d9\u05d3\u05ea \u05de\u05db\u05d5\u05e0\u05d4","kdams":"\u05de\u05d1\u05e0\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05d5\u05d0\u05dc\u05d2\u05d5\u05e8\u05d9\u05ea\u05de\u05d9\u05dd"},"13":{"code":"2144710","name":"\u05de\u05d7\u05e9\u05d5\u05d1 \u05de\u05e7\u05d9\u05e3 - \u05e1\u05de\u05d9\u05e0\u05e8","kdams":"\u05e1\u05d8\u05d8\u05d9\u05e1\u05d8\u05d9\u05e7\u05d4 \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2,\u05d0\u05dc\u05d2\u05d1\u05e8\u05d4 \u05dc\u05d9\u05e0\u05d0\u05e8\u05d9\u05ea,\u05de\u05d1\u05e0\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05d5\u05d0\u05dc\u05d2\u05d5\u05e8\u05d9\u05ea\u05de\u05d9\u05dd"},"15":{"code":"2143895","name":"\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05d4\u05de\u05dc\u05e6\u05d4 \u05de\u05d1\u05d5\u05e1\u05e1\u05d5\u05ea \u05d1\u05d9\u05e0\u05d4 \u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9\u05ea","kdams":"\u05ea\u05db\u05df \u05d5\u05e4\u05d9\u05ea\u05d5\u05d7 \u05e9\u05dc \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2,\u05de\u05d1\u05e0\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05d5\u05d0\u05dc\u05d2\u05d5\u05e8\u05d9\u05ea\u05de\u05d9\u05dd"},"16":{"code":"2142800","name":"\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05e1\u05d3\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd","kdams":"\u05de\u05ea\u05de\u05d8\u05d9\u05e7\u05d4 \u05d3\u05d9\u05e1\u05e7\u05e8\u05d8\u05d9\u05ea \u05d5\u05dc\u05d5\u05d2\u05d9\u05e7\u05d4,\u05ea\u05db\u05e0\u05d5\u05ea \u05de\u05d5\u05e0\u05d7\u05d4 \u05e2\u05e6\u05de\u05d9\u05dd,\u05ea\u05db\u05df \u05d5\u05e4\u05d9\u05ea\u05d5\u05d7 \u05e9\u05dc \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2"},"19":{"code":"2142700","name":"\u05e0\u05d9\u05ea\u05d5\u05d7 \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2","kdams":"\u05ea\u05db\u05df \u05d5\u05e4\u05d9\u05ea\u05d5\u05d7 \u05e9\u05dc \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2"},"20":{"code":"2143550","name":"\u05e0\u05d9\u05ea\u05d5\u05d7 \u05e8\u05e9\u05ea\u05d5\u05ea \u05d7\u05d1\u05e8\u05ea\u05d9\u05d5\u05ea","kdams":"\u05e1\u05d8\u05d8\u05d9\u05e1\u05d8\u05d9\u05e7\u05d4 \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2,\u05de\u05d1\u05e0\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05d5\u05d0\u05dc\u05d2\u05d5\u05e8\u05d9\u05ea\u05de\u05d9\u05dd"}},{"0":{"code":"2144600","name":"\u05d0\u05e1\u05d8\u05e8\u05d8\u05d2\u05d9\u05ea \u05e0\u05d9\u05d4\u05d5\u05dc \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2","kdams":"\u05e0\u05d9\u05ea\u05d5\u05d7 \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2"},"2":{"code":"2143113","name":"\u05d1\u05d9\u05e0\u05d4 \u05e2\u05e1\u05e7\u05d9\u05ea \u05d5\u05de\u05d7\u05e1\u05e0\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd","kdams":"\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05e1\u05d3\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd"},"3":{"code":"2143610","name":"\u05d4\u05e0\u05d3\u05e1\u05ea \u05ea\u05d5\u05db\u05e0\u05d4 \u05d5\u05d0\u05d1\u05d8\u05d7\u05ea \u05d0\u05d9\u05db\u05d5\u05ea","kdams":"\u05ea\u05db\u05df \u05d5\u05e4\u05d9\u05ea\u05d5\u05d7 \u05e9\u05dc \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2,\u05e0\u05d9\u05ea\u05d5\u05d7 \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2,\u05de\u05d1\u05e0\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05d5\u05d0\u05dc\u05d2\u05d5\u05e8\u05d9\u05ea\u05de\u05d9\u05dd"},"4":{"code":"2143801","name":"\u05d9\u05e6\u05d9\u05e8\u05ea\u05d9\u05d5\u05ea \u05d5\u05e7\u05d5\u05d2\u05e0\u05d9\u05e6\u05d9\u05d4 \u05d1\u05d4\u05e0\u05d3\u05e1\u05ea \u05d3\u05e8\u05d9\u05e9\u05d5\u05ea-\u05e1\u05de\u05d9\u05e0\u05e8","kdams":"\u05ea\u05db\u05df \u05d5\u05e4\u05d9\u05ea\u05d5\u05d7 \u05e9\u05dc \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2,\u05e0\u05d9\u05ea\u05d5\u05d7 \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2"},"5":{"code":"2144603","name":"\u05db\u05e8\u05d9\u05d9\u05ea \u05ea\u05d4\u05dc\u05d9\u05db\u05d9\u05dd \u05e2\u05e1\u05e7\u05d9\u05d9\u05dd - \u05e1\u05de\u05d9\u05e0\u05e8","kdams":"\u05e0\u05d9\u05ea\u05d5\u05d7 \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2"},"6":{"code":"2143170","name":"\u05dc\u05de\u05d9\u05d3\u05d4 \u05e2\u05de\u05d5\u05e7\u05d4","kdams":"\u05dc\u05de\u05d9\u05d3\u05ea \u05de\u05db\u05d5\u05e0\u05d4"},"7":{"code":"2143030","name":"\u05de\u05e2\u05d1\u05d3\u05d4 \u05d1\u05de\u05d3\u05e2\u05d9 \u05d4\u05e0\u05ea\u05d5\u05e0\u05d9\u05dd","kdams":"\u05e1\u05d8\u05d8\u05d9\u05e1\u05d8\u05d9\u05e7\u05d4 \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2,\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05e1\u05d3\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd,\u05dc\u05de\u05d9\u05d3\u05ea \u05de\u05db\u05d5\u05e0\u05d4"},"9":{"code":"2143710","name":"\u05e0\u05d9\u05d4\u05d5\u05dc \u05e0\u05ea\u05d5\u05e0\u05d9 \u05e2\u05ea\u05e7 - BIG DATA","kdams":"\u05ea\u05db\u05e0\u05d5\u05ea \u05de\u05d5\u05e0\u05d7\u05d4 \u05e2\u05e6\u05de\u05d9\u05dd,\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05e1\u05d3\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd"},"11":{"code":"2143010","name":"\u05e4\u05e8\u05d8\u05d9\u05d5\u05ea \u05d5\u05d0\u05ea\u05d9\u05e7\u05d4 \u05e9\u05dc \u05de\u05d9\u05d3\u05e2","kdams":"\u05e0\u05d9\u05ea\u05d5\u05d7 \u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2"},"14":{"code":"2143703","name":"\u05ea\u05db\u05df \u05d5\u05de\u05d9\u05de\u05d5\u05e9 \u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d5\u05ea \u05d0\u05e0\u05d3\u05e8\u05d5\u05d0\u05d9\u05d3","kdams":"\u05ea\u05db\u05e0\u05d5\u05ea \u05de\u05d5\u05e0\u05d7\u05d4 \u05e2\u05e6\u05de\u05d9\u05dd,\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05e1\u05d3\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd"}},[{"code":"2143960\u05e9","name":"\u05d1\u05d9\u05e0\u05d4 \u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9\u05ea \u05dc\u05e0\u05d9\u05ea\u05d5\u05d7 \u05e8\u05d2\u05e9\u05d5\u05ea \u05d5\u05d4\u05ea\u05e0\u05d4\u05d2\u05d5\u05ea-\u05e1\u05de\u05d9\u05e0\u05e8","kdams":"\u05dc\u05de\u05d9\u05d3\u05ea \u05de\u05db\u05d5\u05e0\u05d4,\u05dc\u05de\u05d9\u05d3\u05d4 \u05e2\u05de\u05d5\u05e7\u05d4"},{"code":"2143500","name":"\u05e0\u05d5\u05e9\u05d0\u05d9\u05dd \u05de\u05ea\u05e7\u05d3\u05de\u05d9\u05dd \u05d1\u05d4\u05e0\u05d3\u05e1\u05ea \u05ea\u05db\u05e0\u05d4 - \u05e1\u05de\u05d9\u05e0\u05e8","kdams":"\u05d4\u05e0\u05d3\u05e1\u05ea \u05ea\u05d5\u05db\u05e0\u05d4 \u05d5\u05d0\u05d1\u05d8\u05d7\u05ea \u05d0\u05d9\u05db\u05d5\u05ea"},{"code":"2144050","name":"\u05e1\u05de\u05d9\u05e0\u05e8 \u05d1\u05dc\u05de\u05d9\u05d3\u05d4 \u05e2\u05de\u05d5\u05e7\u05d4","kdams":"\u05dc\u05de\u05d9\u05d3\u05d4 \u05e2\u05de\u05d5\u05e7\u05d4"},{"code":"2144750","name":"\u05e9\u05d9\u05d8\u05d5\u05ea \u05d5\u05d9\u05d9\u05e9\u05d5\u05de\u05d9\u05dd \u05de\u05d1\u05d5\u05e1\u05e1\u05d9 \u05dc\u05de\u05d9\u05d3\u05d4 \u05e2\u05de\u05d5\u05e7\u05d4 \u05d1\u05e2\u05d9\u05d1\u05d5\u05d3 \u05d8\u05e7\u05e1\u05d8 - \u05e1\u05de\u05d9\u05e0\u05e8","kdams":"\u05d4\u05e1\u05ea\u05d1\u05e8\u05d5\u05ea \u05dc\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05de\u05d9\u05d3\u05e2,\u05de\u05d1\u05d5\u05d0 \u05dc\u05d1\u05d9\u05e0\u05d4 \u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9\u05ea,\u05dc\u05de\u05d9\u05d3\u05ea \u05de\u05db\u05d5\u05e0\u05d4,\u05dc\u05de\u05d9\u05d3\u05d4 \u05e2\u05de\u05d5\u05e7\u05d4"},{"code":"2144740","name":"\u05e9\u05e7\u05d9\u05e4\u05d5\u05ea \u05d0\u05dc\u05d2\u05d5\u05e8\u05d9\u05ea\u05de\u05d9\u05ea","kdams":"\u05d4\u05e0\u05d3\u05e1\u05ea \u05ea\u05d5\u05db\u05e0\u05d4 \u05d5\u05d0\u05d1\u05d8\u05d7\u05ea \u05d0\u05d9\u05db\u05d5\u05ea"}],[]]');
+            
+            function get_mid(elem)
+            {
+                var offset = elem.offset();
+                var width = elem.width();
+                var height = elem.height();
+                
+                var centerX = offset.left + width / 2;
+                var centerY = offset.top + height / 2;
+                
+                return [centerX, centerY];
+            }
+            
+            function get_rand_color()
+            {
+                colors = ["#808000", "#FF1493", "#2E8B57", "#FF7F50", "#00FA9A", "#BDB76B", "#00FFFF", "#40E0D0", "#FFD700"];
+                return colors[Math.floor(Math.random()*8)];
+            }
+            
+            function showArrows(elem, flgHide)
+            {
+                var id = flgHide ? elem.id : elem.attr('id');
+                
+                if (flgHide)
+                    $("line").hide();
+                $("line[class~="+id+"]").show();
+                
+                if ($("input#slide").is(":checked"))
+                {
+                    var ar = $("span[id='"+id+"']").attr('title').split(',');
+                    if (ar[0] != "null")
+                    {
+                        ar.forEach(crs => {
+                            var elee = $("span").filter(function(){ return $(this).text() == crs; })
+                            showArrows(elee, false);
+                        });
+                    }
+                }
+                
+                //can take the span with elem.id, and for each of the kdams, call showArrows, with flg that tells not to hide arrows
+            }
+            
+            window.onload = function()
+            {
+                $("div[class^='layer']").each(function(index){
+                    var div = $(this);
+                    $.each(data[index], function(key,value) {
+                        div.append('<span title="'+value.kdams+'" onmouseover="showArrows(this,true)" id="s'+value.code+'" class="course">'+value.name+'</span>'); 
+                    });
+                });
+                
+                $("div[class^='layer']").each(function(index){
+                    var div = $(this);
+                    $.each(data[index], function(key,value) {
+                        
+                        $("span[class='course']").each(function(){
+                            if (value.kdams != null && value.kdams.split(',').includes($(this).text()))
+                            {
+                                var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
+                                newLine.setAttribute('class','arrow '+div.attr('class')+' s'+value.code);
+                                newLine.setAttribute('x1',get_mid($(this))[0]);
+                                newLine.setAttribute('y1',get_mid($(this))[1]);
+                                newLine.setAttribute('x2',get_mid($("span#s"+value.code))[0]);
+                                newLine.setAttribute('y2',get_mid($("span#s"+value.code))[1]);
+                                newLine.setAttribute('stroke',get_rand_color());
+                                $("svg").append(newLine);
+                            }
+                        })
+                    });
+                });
+                $("line").hide();
+                
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    		        switchMode();
+            }
+            
+            function switchMode()
+        	{
+        	    if ($("body").hasClass("dark")){
+        	        $("body").attr('class', 'light');
+        	    }
+        	    
+        	    else{
+        	        $("body").attr('class', 'dark');
+        	    }
+        	}
+            	
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => { 
+            	
+                if (event.matches)
+            	   switchMode();
+            });
+          
+        </script>
+    
+</body></html>
