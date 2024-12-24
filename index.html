@@ -1,205 +1,196 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>Main IS Haifa</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/css-toggle-switch/latest/toggle-switch.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IS Haifa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-      .popup {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
-        font-family: arial;
-        font-size: 1.5em;
-      }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
 
-      .popup-content {
-        background-color: white;
-        padding: 20px;
-        text-align: center;
-        border-radius: 5px;
-        font-family: Calibari;
-      }
+        .navbar {
+            background-color: #343a40;
+        }
 
-      .close-btn {
-        background-color: #f44336;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 20px;
-      }
+        .navbar .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+        }
 
-      .discord-icon {
-        background-image: url('img/discord.png');
-        /* Replace 'img/discord.png' with the path to your Discord icon image */
-        background-size: 24px 24px;
-        /* Adjust the size of the icon as needed */
-        background-repeat: no-repeat;
-        width: 24px;
-        /* Set the width and height of the icon */
-        height: 24px;
-        top: 3px;
-      }
+        .navbar .nav-link:hover {
+            color: #ffc107 !important;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #6c757d, #343a40);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            border-radius: 12px 12px 0 0;
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
-   </head>
-  <body class="">
-      <div class="msg">
-        <marquee class="msg" behavior="scroll" scrollamount="10" direction="right"> עברנו לאחסון גיט!&emsp;&emsp;&emsp;&emsp;צוות האתר אינו אחראי על כל שימוש שנעשה באתר</marquee>
-      </div>
-    <!--text&emsp;&emsp;&emsp;&emsp;&excl;-->
-    <div id="loading"></div>
-    <div class="navigation-wrap bg-light start-header start-style">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <nav class="navbar navbar-expand-md navbar-light">
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <h3 style="font-family: 'Montserrat', sans-serif; font-size: 18px; position: absolute">IS Haifa, 14867 Entries.</h3>
-                <ul class="navbar-nav ml-auto py-4 py-md-0">
-                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                  </li>
-                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                    <a class="nav-link" href="About/">About</a>
-                  </li>
-                  <li id="lst" class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="https://www.youtube.com/playlist?list=PLUfHxBkkFMSd0LrsOhOmB7H9SUBlM_5wR">Job interviewes</a>
-                      <a class="dropdown-item" href="">Coming soon...</a>
-                    </div>
-                  </li>
-                  <div style="margin-left:20px" class="switch-toggle switch-3 switch-candy">
-                    <input id="on" name="state-d" type="radio" checked="">
-                    <label for="on" id="1" onclick="">ON</label>
-                    <input id="na" name="state-d" type="radio" disabled="" checked="checked">
-                    <label for="na" class="disabled" onclick="">&nbsp;</label>
-                    <input id="off" name="state-d" type="radio">
-                    <label for="off" id="0" onclick="">OFF</label>
-                    <a></a>
-                  </div>
-                </ul>
-              </div>
-            </nav>
-          </div>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">IS Haifa, 14867 Entries.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#resources">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
         </div>
-      </div>
     </div>
-    <!-- two in a col!! -->
-    <section id="services" class="container2">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-sm-6 caption flex">
-              <a target="_blank" href="https://docs.google.com/spreadsheets/d/1_OKtGALHoDFFt79s5tbE7TKoSQcmNNWf/edit?usp=sharing&ouid=101507445053063258496&rtpof=true&sd=true" title="קישורים לקבוצות קורסים">
-                <h4>קישורים לקבוצות קורסים</h4>
-              </a>
-              <br>
-              <a target="_blank" href="https://docs.google.com/spreadsheets/d/1_OKtGALHoDFFt79s5tbE7TKoSQcmNNWf/edit?usp=sharing&ouid=101507445053063258496&rtpof=true&sd=true" title="קישורים לקבוצות קורסים">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/640px-WhatsApp.svg.png" class="serv" alt="קישורים לקבוצות">
-              </a>
-              <p></p>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <h1>Welcome to IS Haifa</h1>
+        <p>We moved to git! Our team is not responsible for any usage done with this site.</p>
+    </div>
+</section>
+
+<section id="resources" class="py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/640px-WhatsApp.svg.png" alt="Course Links" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">קישורים לקבוצות קורסים</h5>
+                        <p class="card-text">Access all course-related WhatsApp groups and materials.</p>
+                        <a href="https://docs.google.com/spreadsheets/d/1_OKtGALHoDFFt79s5tbE7TKoSQcmNNWf/edit?usp=sharing&ouid=101507445053063258496&rtpof=true&sd=true" class="btn btn-primary">View Links</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-6 caption flex">
-              <a target="_blank" href="https://ISPlus2.github.io/kdams.html" title="עץ קדמים">
-                <h4>עץ קדמים</h4>
-              </a>
-              <br>
-              <a target="_blank" href="https://ISPlus2.github.io/kdams.html" title="עץ קדמים">
-                <img src="https://ISPlus2.github.io/img/tree.png" class="serv" alt="עץ קדמים">
-              </a>
-              
-              <p></p>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://ISPlus2.github.io/img/tree.png" alt="Prerequisite Tree" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">עץ קדמים</h5>
+                        <p class="card-text">View the prerequisite tree for your courses.</p>
+                        <a href="https://ISPlus2.github.io/kdams.html" class="btn btn-primary">View Tree</a>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://ISPlus2.github.io/img/grade.png" alt="Grades" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">ציונים</h5>
+                        <p class="card-text">Track your academic performance and achievements.</p>
+                        <a href="https://ISPlus2.github.io/grades" class="btn btn-primary">View Grades</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://ISPlus2.github.io/img/drive.png" alt="Materials" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">חומרים</h5>
+                        <p class="card-text">Access shared materials and resources.</p>
+                        <a href="https://drive.google.com/drive/folders/1y6uMILEAEZ34BF5Vg9w5KGLLG1QDa-Il?usp=sharing" class="btn btn-primary">View Materials</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://ISPlus2.github.io/img/complain.png" alt="Contact Us" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">צרו קשר</h5>
+                        <p class="card-text">Get in touch with the support team for any inquiries.</p>
+                        <a href="https://ISPlus2.github.io/write.html" class="btn btn-primary">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://ISPlus2.github.io/img/grade.png" alt="Upload Grades" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">העלאת ציונים</h5>
+                        <p class="card-text">Upload and manage your grades securely.</p>
+                        <a href="https://forms.gle/GzwGLjQFBBhiUxTr5" class="btn btn-primary">Upload Grades</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://ISPlus2.github.io/img/upload.png" alt="Upload Materials" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">העלאת חומרים</h5>
+                        <p class="card-text">Share your course materials with others.</p>
+                        <a href="https://forms.gle/xgnFBdmky7ysHPig6" class="btn btn-primary">Upload Materials</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-sm-6 caption flex">
-              <a target="_blank" href="https://ISPlus2.github.io/grades" title="ציונים">
-                <h4>ציונים</h4>
-              </a>
-              <br>
-              <a target="_blank" href="https://ISPlus2.github.io/grades" title="ציונים">
-                <img src="https://ISPlus2.github.io/img/grade.png" class="serv" alt="ציונים">
-              </a>
-              <p></p>
-            </div>
-            <div class="col-sm-6 caption flex">
-              <a target="_blank" href="https://drive.google.com/drive/folders/1y6uMILEAEZ34BF5Vg9w5KGLLG1QDa-Il?usp=sharing" title="חומרים">
-                <h4>חומרים</h4>
-              </a>
-              <br>
-              <a target="_blank" href="https://drive.google.com/drive/folders/1y6uMILEAEZ34BF5Vg9w5KGLLG1QDa-Il?usp=sharing" title="חומרים">
-                <img src="https://ISPlus2.github.io/img/drive.png" class="serv" alt="חומרים">
-              </a>
-              <p></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-sm-6 caption flex">
-            </div>
-            <div class="col-sm-6 caption flex">
-              <a target="_blank" href="https://ISPlus2.github.io/write.html" title="צרו קשר">
-                <h4>צרו קשר</h4>
-              </a>
-              <br>
-              <a target="_blank" href="https://ISPlus2.github.io/write.html" title="צרו קשר">
-                <img src="https://ISPlus2.github.io/img/complain.png" class="serv" alt="צרו קשר">
-              </a>
-              <p></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-sm-6 caption flex">
-              <a target="_blank" href="https://forms.gle/GzwGLjQFBBhiUxTr5" title="העלאת ציונים">
-                <h4>העלאת ציונים</h4>
-              </a>
-              <br>
-              <a target="_blank" href="https://drive.google.com/drive/folders/1g55xy-vd3dqTLcmZlf1khBzCRxo-yuag?usp=sharing" title="העלאת ציונים">
-                <img src="https://ISPlus2.github.io/img/grade.png" class="serv" alt="העלאת ציונים">
-              </a>
-              <p></p>
-            </div>
-            <div class="col-sm-6 caption flex">
-              <a target="_blank" href="https://forms.gle/xgnFBdmky7ysHPig6" title="העלאת חומרים">
-                <h4>העלאת חומרים</h4>
-              </a>
-              <br>
-              <a target="_blank" href="https://forms.gle/xgnFBdmky7ysHPig6" title="העלאת חומרים">
-                <img src="https://ISPlus2.github.io/img/upload.png" class="serv" alt="העלאת חומרים">
-              </a>
-              <p></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-    <script>
-      function show_lecs() {
-        $("li#lst").addClass('show');
-        $("div.dropdown-menu").focus();
-      }
-    </script>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 IS Haifa. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
