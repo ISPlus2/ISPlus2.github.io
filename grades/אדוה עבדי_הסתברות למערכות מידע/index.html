@@ -260,7 +260,7 @@
             imageObj.src = "../table-new.png";
         }
 
-        const jsonFilename = 'data.json';
+        const jsonFilename = 'data.json?v=' + new Date().getTime();
         loadJSONData(jsonFilename)
             .then(data => displayData(data))
             .catch(error => console.error('Error loading JSON data:', error));
