@@ -1,11 +1,21 @@
 <html>
   <head>
     <title>List of Files</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0, viewport-fit=cover">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0, viewport-fit=cover"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" type="text/css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,900"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://www.myersdaily.org/joseph/javascript/md5.js"></script>
     <style>
       *,
@@ -18,7 +28,8 @@
 
       body {
         background: #dadada;
-        font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light",
+          "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         font-weight: 400;
         font-size: 14px;
         line-height: 18px;
@@ -35,7 +46,7 @@
         padding: 40px;
         border-radius: 3px;
         text-align: left;
-        margin-top: 9em
+        margin-top: 9em;
       }
 
       @media only screen and (max-width: 700px) {
@@ -72,7 +83,7 @@
       .block {
         clear: both;
         min-height: 50px;
-        border-top: solid 1px #ECE9E9;
+        border-top: solid 1px #ece9e9;
       }
 
       .block:first-child {
@@ -85,7 +96,7 @@
         display: block;
         float: left;
         margin-right: 10px;
-        background: url('icon.png');
+        background: url("icon.png");
         background-repeat: round;
       }
 
@@ -249,7 +260,7 @@
 
       .sub {
         margin-left: 20px;
-        border-left: solid 5px #ECE9E9;
+        border-left: solid 5px #ece9e9;
         display: none;
       }
 
@@ -295,7 +306,7 @@
       }
 
       .cover-spin::after {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         left: 48%;
@@ -307,8 +318,8 @@
         border-top-color: transparent;
         border-width: 4px;
         border-radius: 50%;
-        -webkit-animation: spin .8s linear infinite;
-        animation: spin .8s linear infinite;
+        -webkit-animation: spin 0.8s linear infinite;
+        animation: spin 0.8s linear infinite;
       }
 
       #snackbar {
@@ -431,7 +442,10 @@
         --tw-skew-y: 0;
         --tw-scale-x: 1;
         --tw-scale-y: 1;
-        transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        transform: translateX(var(--tw-translate-x))
+          translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
+          skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+          scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
       }
 
       header {
@@ -477,29 +491,131 @@
   </head>
   <body oncontextmenu="return false;" class="light">
     <div hidden="" id="load" class="cover-panel cover-spin"></div>
-    <header id="header" style="height: 100px; position: absolute; width: 100%; top: 0%;">
+    <header
+      id="header"
+      style="height: 100px; position: absolute; width: 100%; top: 0%"
+    >
       <div style="width: 100%; height: 100%">
-        <div style="width: 100%; height: 62%; top: 0%; position: absolute;">
-          <a class="hover" href="https://drive.google.com/drive/folders/1g55xy-vd3dqTLcmZlf1khBzCRxo-yuag?usp=sharing" title="Directory Lister" style="position: absolute; top: 15%; left: 4%; width: 50px; height:30px;">
-            <img width="100%" src="https://isplus2.github.io/img/upload.png">
+        <div style="width: 100%; height: 62%; top: 0%; position: absolute">
+          <a
+            class="hover"
+            href="https://drive.google.com/drive/folders/1g55xy-vd3dqTLcmZlf1khBzCRxo-yuag?usp=sharing"
+            title="Directory Lister"
+            style="
+              position: absolute;
+              top: 15%;
+              left: 4%;
+              width: 50px;
+              height: 30px;
+            "
+          >
+            <img width="100%" src="https://isplus2.github.io/img/upload.png" />
           </a>
-          <form onsubmit="return false" style="border-radius: 9999px; width: 64%;left: 20%;position: absolute;height: 59%; top: 23%;">
-            <input class="search" type="text" value="" name="search" placeholder="Search..." style="color: white; outline: none; background-color: transparent; border: 0 solid #341c70; position: absolute; width: 85%; height: 60%; top: 24%; left: 9%; font-size: 15px;">
-            <i class="fa-search fa" style="left: 2.5%; position: absolute; top: 28%; color: rgb(53,28,112); font-size: 16px;"></i>
+          <form
+            onsubmit="return false"
+            style="
+              border-radius: 9999px;
+              width: 64%;
+              left: 20%;
+              position: absolute;
+              height: 59%;
+              top: 23%;
+            "
+          >
+            <input
+              class="search"
+              type="text"
+              value=""
+              name="search"
+              placeholder="Search..."
+              style="
+                color: white;
+                outline: none;
+                background-color: transparent;
+                border: 0 solid #341c70;
+                position: absolute;
+                width: 85%;
+                height: 60%;
+                top: 24%;
+                left: 9%;
+                font-size: 15px;
+              "
+            />
+            <i
+              class="fa-search fa"
+              style="
+                left: 2.5%;
+                position: absolute;
+                top: 28%;
+                color: rgb(53, 28, 112);
+                font-size: 16px;
+              "
+            ></i>
           </form>
-          <div id="mode" style=" width: 1rem; height: 2rem; cursor: pointer; position: absolute; right: 5%; top: 30%; border-radius: 9999px; background-color: rgba(15,23,42,0.3);">
-            <div class="transform" style="transition-property: all;transition-duration: .3s;transition-timing-function: cubic-bezier(.4,0,.2,1);background-color: white;border-radius: 9999px;width: 1.25rem; height: 1.25rem;margin-left: -0.08rem;">
-              <i id="lamp" class="fa fa-lightbulb-o" style="font-size: .75em;"></i>
+          <div
+            id="mode"
+            style="
+              width: 1rem;
+              height: 2rem;
+              cursor: pointer;
+              position: absolute;
+              right: 5%;
+              top: 30%;
+              border-radius: 9999px;
+              background-color: rgba(15, 23, 42, 0.3);
+            "
+          >
+            <div
+              class="transform"
+              style="
+                transition-property: all;
+                transition-duration: 0.3s;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                background-color: white;
+                border-radius: 9999px;
+                width: 1.25rem;
+                height: 1.25rem;
+                margin-left: -0.08rem;
+              "
+            >
+              <i
+                id="lamp"
+                class="fa fa-lightbulb-o"
+                style="font-size: 0.75em"
+              ></i>
             </div>
           </div>
         </div>
-        <hr style="top: 57%;position: absolute; width: 100%;">
-        <div style="width: 100%;height: 31%;top: 66%;position: absolute;">
-          <div style="position: absolute; width: 84%; height: 60%; top:30%; left:5%; overflow-x: auto;">
+        <hr style="top: 57%; position: absolute; width: 100%" />
+        <div style="width: 100%; height: 31%; top: 66%; position: absolute">
+          <div
+            style="
+              position: absolute;
+              width: 84%;
+              height: 60%;
+              top: 30%;
+              left: 5%;
+              overflow-x: auto;
+            "
+          >
             <a class="directory" href="/grades/">grades / </a>
           </div>
-          <div style="cursor: pointer;position: absolute;right: 4.8%;height: 60%;color: white;top: 25%;">
-            <a onclick="copy_link()" class="dl hover" title="Download this Directory" style="font-size: 1.1rem; line-height: 1.25rem;">
+          <div
+            style="
+              cursor: pointer;
+              position: absolute;
+              right: 4.8%;
+              height: 60%;
+              color: white;
+              top: 25%;
+            "
+          >
+            <a
+              onclick="copy_link()"
+              class="dl hover"
+              title="Download this Directory"
+              style="font-size: 1.1rem; line-height: 1.25rem"
+            >
               <i class="fa fa-copy fa-lg"></i>
             </a>
           </div>
@@ -509,10 +625,13 @@
     <div class="wrap">
       <div id="regular-data">
         <div class="block">
-          <a href="https://isplus2.github.io/grades/אדוה עבדי_הסתברות למערכות מידע" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/BIG DATA - ניהול נתוני עתק"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">אדוה עבדי_הסתברות למערכות מידע</div>
+              <div class="file fs-1-2 bold">BIG DATA - ניהול נתוני עתק</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -520,10 +639,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/אדוה עבדי_סטטיסטיקה למערכות מידע" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/Deep Learning - Seminar"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">אדוה עבדי_סטטיסטיקה למערכות מידע</div>
+              <div class="file fs-1-2 bold">Deep Learning - Seminar</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -531,10 +653,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/אורן בן צבי_מתמטיקה דיסקרטית" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/אופטימיזציה במערכות תפעוליות"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">אורן בן צבי_מתמטיקה דיסקרטית</div>
+              <div class="file fs-1-2 bold">אופטימיזציה במערכות תפעוליות</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -542,10 +667,10 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/איגור קליינר_כריית טקסט בשפת פייתון" class="dir">
+          <a href="https://isplus2.github.io/grades/איחזור מידע" class="dir">
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">איגור קליינר_כריית טקסט בשפת פייתון</div>
+              <div class="file fs-1-2 bold">איחזור מידע</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -553,10 +678,15 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/אילן שמשוני_Deep Learning - Seminar" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/אינטגרציה ויישום מע מידע ארגוניות (ERP)"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">אילן שמשוני_Deep Learning - Seminar</div>
+              <div class="file fs-1-2 bold">
+                אינטגרציה ויישום מע מידע ארגוניות (ERP)
+              </div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -564,10 +694,10 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/אילן שמשוני_למידת מכונה" class="dir">
+          <a href="https://isplus2.github.io/grades/אלגברה לינארית" class="dir">
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">אילן שמשוני_למידת מכונה</div>
+              <div class="file fs-1-2 bold">אלגברה לינארית</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -575,10 +705,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/אילן שמשוני_תכנות מונחה עצמים" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/אסטרטגית ניהול מערכות מידע"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">אילן שמשוני_תכנות מונחה עצמים</div>
+              <div class="file fs-1-2 bold">אסטרטגית ניהול מערכות מידע</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -586,10 +719,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/איריס ברגר_תכן ופיתוח של מערכות מידע" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/בינה עסקית ומחסני נתונים"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">איריס ברגר_תכן ופיתוח של מערכות מידע</div>
+              <div class="file fs-1-2 bold">בינה עסקית ומחסני נתונים</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -597,10 +733,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/אכרם סאלח_חדוא ב" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/היבטים כלכליים בקבלת החלטות"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">אכרם סאלח_חדוא ב</div>
+              <div class="file fs-1-2 bold">היבטים כלכליים בקבלת החלטות</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -608,10 +747,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/אלכסנדרה קוגן_מבוא לטכנולוגיות מידע בארגון" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/הנדסת תוכנה ואבטחת איכות"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">אלכסנדרה קוגן_מבוא לטכנולוגיות מידע בארגון</div>
+              <div class="file fs-1-2 bold">הנדסת תוכנה ואבטחת איכות</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -619,10 +761,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/אסלאם עכריה_חדוא א" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/הסתברות למערכות מידע"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">אסלאם עכריה_חדוא א</div>
+              <div class="file fs-1-2 bold">הסתברות למערכות מידע</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -630,10 +775,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/ארטיום ברגר_ניהול נתוני עתק - BIG DATA" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/התנהגות ארגונית"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">ארטיום ברגר_ניהול נתוני עתק - BIG DATA</div>
+              <div class="file fs-1-2 bold">התנהגות ארגונית</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -641,10 +789,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/אריה פוגל_אינטגרציה ויישום מע מידע ארגוניות (ERP)" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/ויזואליזציה של המידע"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">אריה פוגל_אינטגרציה ויישום מע מידע ארגוניות (ERP)</div>
+              <div class="file fs-1-2 bold">ויזואליזציה של המידע</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -652,10 +803,10 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/אשרת אילון_מבוא לטכנולוגיות מידע בארגון" class="dir">
+          <a href="https://isplus2.github.io/grades/חדוא א" class="dir">
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">אשרת אילון_מבוא לטכנולוגיות מידע בארגון</div>
+              <div class="file fs-1-2 bold">חדוא א</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -663,10 +814,10 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/דניאלה אבידן איצקוב_אלגברה לינארית" class="dir">
+          <a href="https://isplus2.github.io/grades/חדוא ב" class="dir">
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">דניאלה אבידן איצקוב_אלגברה לינארית</div>
+              <div class="file fs-1-2 bold">חדוא ב</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -674,10 +825,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/הדר מילר_ניתוח מערכות מידע" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/חומרה ומערכות הפעלה"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">הדר מילר_ניתוח מערכות מידע</div>
+              <div class="file fs-1-2 bold">חומרה ומערכות הפעלה</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -685,10 +839,15 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/טאהר עודה_חדוא ב" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/יצירתיות וקוגניציה בהנדסת דרישות-סמינר"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">טאהר עודה_חדוא ב</div>
+              <div class="file fs-1-2 bold">
+                יצירתיות וקוגניציה בהנדסת דרישות-סמינר
+              </div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -696,10 +855,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/יאן קליאבר_פיתוח ארכיטקטורות מבוססות ענן" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/כריית טקסט בשפת פייתון"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">יאן קליאבר_פיתוח ארכיטקטורות מבוססות ענן</div>
+              <div class="file fs-1-2 bold">כריית טקסט בשפת פייתון</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -707,10 +869,10 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/יהודית סומך_מבוא למחשבים ותכנות" class="dir">
+          <a href="https://isplus2.github.io/grades/למידת מכונה" class="dir">
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">יהודית סומך_מבוא למחשבים ותכנות</div>
+              <div class="file fs-1-2 bold">למידת מכונה</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -718,10 +880,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/יהודית סומך_מעבדה במדעי הנתונים" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/מבוא לבינה מלאכותית"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">יהודית סומך_מעבדה במדעי הנתונים</div>
+              <div class="file fs-1-2 bold">מבוא לבינה מלאכותית</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -729,10 +894,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/יהודית סומך_שיטות במדעי הנתונים" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/מבוא לטכנולוגיות מידע בארגון"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">יהודית סומך_שיטות במדעי הנתונים</div>
+              <div class="file fs-1-2 bold">מבוא לטכנולוגיות מידע בארגון</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -740,10 +908,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/יואל לניר_ויזואליזציה של המידע" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/מבוא למחשבים ותכנות"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">יואל לניר_ויזואליזציה של המידע</div>
+              <div class="file fs-1-2 bold">מבוא למחשבים ותכנות</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -751,10 +922,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/יואל לניר_מבני נתונים ואלגוריתמים" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/מבני נתונים ואלגוריתמים"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">יואל לניר_מבני נתונים ואלגוריתמים</div>
+              <div class="file fs-1-2 bold">מבני נתונים ואלגוריתמים</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -762,10 +936,10 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/יובל כהן_מבני נתונים ואלגוריתמים" class="dir">
+          <a href="https://isplus2.github.io/grades/ממשקי אדם מחשב" class="dir">
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">יובל כהן_מבני נתונים ואלגוריתמים</div>
+              <div class="file fs-1-2 bold">ממשקי אדם מחשב</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -773,10 +947,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/יותם עברון_מבני נתונים ואלגוריתמים" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/מעבדה במדעי הנתונים"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">יותם עברון_מבני נתונים ואלגוריתמים</div>
+              <div class="file fs-1-2 bold">מעבדה במדעי הנתונים</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -784,10 +961,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/יזיד מרעי_אלגברה לינארית" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/מערכות מסדי נתונים"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">יזיד מרעי_אלגברה לינארית</div>
+              <div class="file fs-1-2 bold">מערכות מסדי נתונים</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -795,10 +975,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/ליאור-יעקב שלו_בינה עסקית ומחסני נתונים" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/מתמטיקה דיסקרטית"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">ליאור-יעקב שלו_בינה עסקית ומחסני נתונים</div>
+              <div class="file fs-1-2 bold">מתמטיקה דיסקרטית</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -806,10 +989,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/מואיד מוקטרן_חומרה ומערכות הפעלה" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/ניתוח מערכות מידע"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">מואיד מוקטרן_חומרה ומערכות הפעלה</div>
+              <div class="file fs-1-2 bold">ניתוח מערכות מידע</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -817,10 +1003,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/מור פלג_ניתוח מערכות מידע" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/סטטיסטיקה למערכות מידע"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">מור פלג_ניתוח מערכות מידע</div>
+              <div class="file fs-1-2 bold">סטטיסטיקה למערכות מידע</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -828,10 +1017,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/מרסלו פייגלשטיין_מבוא למחשבים ותכנות" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/פיתוח ארכיטקטורות מבוססות ענן"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">מרסלו פייגלשטיין_מבוא למחשבים ותכנות</div>
+              <div class="file fs-1-2 bold">פיתוח ארכיטקטורות מבוססות ענן</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -839,10 +1031,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/ניצנה-ויקטוריה ברקן_הסתברות למערכות מידע" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/פרטיות ואתיקה של מידע"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">ניצנה-ויקטוריה ברקן_הסתברות למערכות מידע</div>
+              <div class="file fs-1-2 bold">פרטיות ואתיקה של מידע</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -850,10 +1045,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/ניצנה-ויקטוריה ברקן_שיטות סטטיסטיות" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/שיטות במדעי הנתונים"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">ניצנה-ויקטוריה ברקן_שיטות סטטיסטיות</div>
+              <div class="file fs-1-2 bold">שיטות במדעי הנתונים</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -861,10 +1059,15 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/נסים אוטמזגין_תקשורת נתונים" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/ויישומים מבוססי למידה עמוקה בעיבוד טקסט - סמינר"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">נסים אוטמזגין_תקשורת נתונים</div>
+              <div class="file fs-1-2 bold">
+                ויישומים מבוססי למידה עמוקה בעיבוד טקסט - סמינר
+              </div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -872,10 +1075,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/נעמי שפיגל_יצירתיות וקוגניציה בהנדסת דרישות-סמינר" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/שיטות סטטיסטיות"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">נעמי שפיגל_יצירתיות וקוגניציה בהנדסת דרישות-סמינר</div>
+              <div class="file fs-1-2 bold">שיטות סטטיסטיות</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -883,10 +1089,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/עינת מינקוב_מבוא לבינה מלאכותית" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/תכן ופיתוח של מערכות מידע"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">עינת מינקוב_מבוא לבינה מלאכותית</div>
+              <div class="file fs-1-2 bold">תכן ופיתוח של מערכות מידע</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -894,10 +1103,13 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/עינת מינקוב_שיטות ויישומים מבוססי למידה עמוקה בעיבוד טקסט - סמינר" class="dir">
+          <a
+            href="https://isplus2.github.io/grades/תכנות מונחה עצמים"
+            class="dir"
+          >
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">עינת מינקוב_שיטות ויישומים מבוססי למידה עמוקה בעיבוד טקסט - סמינר</div>
+              <div class="file fs-1-2 bold">תכנות מונחה עצמים</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -905,142 +1117,10 @@
           </a>
         </div>
         <div class="block">
-          <a href="https://isplus2.github.io/grades/עפר ארזי_אסטרטגית ניהול מערכות מידע" class="dir">
+          <a href="https://isplus2.github.io/grades/תקשורת נתונים" class="dir">
             <div class="img dir"></div>
             <div class="name">
-              <div class="file fs-1-2 bold">עפר ארזי_אסטרטגית ניהול מערכות מידע</div>
-              <div class="data upper size fs-0-7">
-                <span class="bold">DIRECTORY</span> files
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="block">
-          <a href="https://isplus2.github.io/grades/פליקס טנר_ממשקי אדם מחשב" class="dir">
-            <div class="img dir"></div>
-            <div class="name">
-              <div class="file fs-1-2 bold">פליקס טנר_ממשקי אדם מחשב</div>
-              <div class="data upper size fs-0-7">
-                <span class="bold">DIRECTORY</span> files
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="block">
-          <a href="https://isplus2.github.io/grades/פנינה סופר_אופטימיזציה במערכות תפעוליות" class="dir">
-            <div class="img dir"></div>
-            <div class="name">
-              <div class="file fs-1-2 bold">פנינה סופר_אופטימיזציה במערכות תפעוליות</div>
-              <div class="data upper size fs-0-7">
-                <span class="bold">DIRECTORY</span> files
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="block">
-          <a href="https://isplus2.github.io/grades/צבי קופליק_איחזור מידע" class="dir">
-            <div class="img dir"></div>
-            <div class="name">
-              <div class="file fs-1-2 bold">צבי קופליק_איחזור מידע</div>
-              <div class="data upper size fs-0-7">
-                <span class="bold">DIRECTORY</span> files
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="block">
-          <a href="https://isplus2.github.io/grades/צבי קופליק_הנדסת תוכנה ואבטחת איכות" class="dir">
-            <div class="img dir"></div>
-            <div class="name">
-              <div class="file fs-1-2 bold">צבי קופליק_הנדסת תוכנה ואבטחת איכות</div>
-              <div class="data upper size fs-0-7">
-                <span class="bold">DIRECTORY</span> files
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="block">
-          <a href="https://isplus2.github.io/grades/רון אייכל_היבטים כלכליים בקבלת החלטות" class="dir">
-            <div class="img dir"></div>
-            <div class="name">
-              <div class="file fs-1-2 bold">רון אייכל_היבטים כלכליים בקבלת החלטות</div>
-              <div class="data upper size fs-0-7">
-                <span class="bold">DIRECTORY</span> files
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="block">
-          <a href="https://isplus2.github.io/grades/רון אייכל_התנהגות ארגונית" class="dir">
-            <div class="img dir"></div>
-            <div class="name">
-              <div class="file fs-1-2 bold">רון אייכל_התנהגות ארגונית</div>
-              <div class="data upper size fs-0-7">
-                <span class="bold">DIRECTORY</span> files
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="block">
-          <a href="https://isplus2.github.io/grades/רמי רשקוביץ_מבוא לטכנולוגיות מידע בארגון" class="dir">
-            <div class="img dir"></div>
-            <div class="name">
-              <div class="file fs-1-2 bold">רמי רשקוביץ_מבוא לטכנולוגיות מידע בארגון</div>
-              <div class="data upper size fs-0-7">
-                <span class="bold">DIRECTORY</span> files
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="block">
-          <a href="https://isplus2.github.io/grades/רמי רשקוביץ_מבני נתונים ואלגוריתמים" class="dir">
-            <div class="img dir"></div>
-            <div class="name">
-              <div class="file fs-1-2 bold">רמי רשקוביץ_מבני נתונים ואלגוריתמים</div>
-              <div class="data upper size fs-0-7">
-                <span class="bold">DIRECTORY</span> files
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="block">
-          <a href="https://isplus2.github.io/grades/רן וולף_פרטיות ואתיקה של מידע" class="dir">
-            <div class="img dir"></div>
-            <div class="name">
-              <div class="file fs-1-2 bold">רן וולף_פרטיות ואתיקה של מידע</div>
-              <div class="data upper size fs-0-7">
-                <span class="bold">DIRECTORY</span> files
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="block">
-          <a href="https://isplus2.github.io/grades/שאדי עסאקלה_מערכות מסדי נתונים" class="dir">
-            <div class="img dir"></div>
-            <div class="name">
-              <div class="file fs-1-2 bold">שאדי עסאקלה_מערכות מסדי נתונים</div>
-              <div class="data upper size fs-0-7">
-                <span class="bold">DIRECTORY</span> files
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="block">
-          <a href="https://isplus2.github.io/grades/תומר שגיא_בינה עסקית ומחסני נתונים" class="dir">
-            <div class="img dir"></div>
-            <div class="name">
-              <div class="file fs-1-2 bold">תומר שגיא_בינה עסקית ומחסני נתונים</div>
-              <div class="data upper size fs-0-7">
-                <span class="bold">DIRECTORY</span> files
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="block">
-          <a href="https://isplus2.github.io/grades/תמיר בוקאעי_חדוא א" class="dir">
-            <div class="img dir"></div>
-            <div class="name">
-              <div class="file fs-1-2 bold">תמיר בוקאעי_חדוא א</div>
+              <div class="file fs-1-2 bold">תקשורת נתונים</div>
               <div class="data upper size fs-0-7">
                 <span class="bold">DIRECTORY</span> files
               </div>
@@ -1048,12 +1128,17 @@
           </a>
         </div>
       </div>
+
       <div hidden="" id="search-data"></div>
     </div>
     <div id="snackbar">Some text some message..</div>
     <script>
-      $(document).ready(function() {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) switchMode();
+      $(document).ready(function () {
+        if (
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        )
+          switchMode();
         $("div#mode").click(switchMode);
         $("input.search").keyup(search);
       });
@@ -1070,76 +1155,98 @@
             type: "POST",
             data: {
               pattern: $(this).val(),
-              root: '/home/u299615442/domains/isplus2.github.io/public_html/',
-              url: 'https://isplus2.github.io',
-              total_path: 'grades/'
+              root: "/home/u299615442/domains/isplus2.github.io/public_html/",
+              url: "https://isplus2.github.io",
+              total_path: "grades/",
             },
-            success: function(result) {
+            success: function (result) {
               $("div#load").hide();
               result = JSON.parse(result);
-              if (result['error'] == 1) {
-                $("div#snackbar").text(result['data']);
-                $("div#snackbar").attr('class', 'show');
-                setTimeout(function() {
-                  $("div#snackbar").removeClass('show');
+              if (result["error"] == 1) {
+                $("div#snackbar").text(result["data"]);
+                $("div#snackbar").attr("class", "show");
+                setTimeout(function () {
+                  $("div#snackbar").removeClass("show");
                 }, 5000);
               } else {
                 $("div#search-data").html("");
                 $("div#regular-data").hide();
-                result['data'].forEach(obj => buildSearchResultObject(obj[2], obj[0], obj[1]));
+                result["data"].forEach((obj) =>
+                  buildSearchResultObject(obj[2], obj[0], obj[1])
+                );
                 $("div#search-data").show();
               }
-            }
+            },
           });
         }
       }
 
       function buildSearchResultObject(url, filesize, filetime) {
-        var basename = url.split('/').pop();
-        var file_ext = basename.split('.').pop();
-        var download_att = '';
-        download_att.replace('basename', basename);
-        var data = " < div class = 'block' >< a href = '" + url + "'
-        target = '_blank'
-        class = '"+file_ext+"' {
-          "+download_att+"
-        } > "+
-        " < div class = 'img " + file_ext + "' >< /div>< div class = 'name' > " + " < div class = 'file fs-1-2 bold' > " + basename + " < /div>< div class = 'data upper size fs-0-7' >< span class = 'bold' > Size: < /span>" + filesize + " < /div>" + " < div class = 'data upper modified fs-0-7' >< span class = 'bold' > Last modified: < /span>" + filetime + " < /div>< /div>< /a>< /div>";
+        var basename = url.split("/").pop();
+        var file_ext = basename.split(".").pop();
+        var download_att = "";
+        download_att.replace("basename", basename);
+        var data =
+          " < div class = 'block' >< a href = '" +
+          url +
+          "' target = '_blank' class = '" +
+          file_ext +
+          "' { " +
+          download_att +
+          " } > " +
+          " < div class = 'img " +
+          file_ext +
+          "' >< /div>< div class = 'name' > " +
+          " < div class = 'file fs-1-2 bold' > " +
+          basename +
+          " < /div>< div class = 'data upper size fs-0-7' >< span class = 'bold' > Size: < /span>" +
+          filesize +
+          " < /div>" +
+          " < div class = 'data upper modified fs-0-7' >< span class = 'bold' > Last modified: < /span>" +
+          filetime +
+          " < /div>< /div>< /a>< /div>";
         $("div#search-data").html($("div#search-data").html() + data);
       }
-      document.onkeydown = function(e) {
+
+      document.onkeydown = function (e) {
         if (event.keyCode == 123) {
           return false;
         }
-        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
           return false;
         }
-        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
           return false;
         }
-        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
           return false;
         }
-      }
+      };
 
       function copy_link() {
-        navigator.clipboard.writeText(decodeURIComponent(window.location.href)).then(() => {
-          window.alert("url copied!");
-        }).catch((error) => {
-          console.error("Unable to copy text to clipboard: ", error);
-        });
+        navigator.clipboard
+          .writeText(decodeURIComponent(window.location.href))
+          .then(() => {
+            window.alert("url copied!");
+          })
+          .catch((error) => {
+            console.error("Unable to copy text to clipboard: ", error);
+          });
       }
 
       function switchMode() {
         if ($("body").hasClass("dark")) {
-          $("body").attr('class', 'light');
+          $("body").attr("class", "light");
         } else {
-          $("body").attr('class', 'dark');
+          $("body").attr("class", "dark");
         }
       }
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-        if (event.matches) switchMode();
-      });
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (event.matches) switchMode();
+        });
     </script>
   </body>
 </html>
